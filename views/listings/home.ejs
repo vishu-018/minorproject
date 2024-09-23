@@ -1,0 +1,50 @@
+<% layout('/layouts/boilerplate') %>
+
+
+<!-- Services Section -->
+<section >
+    <div>
+        <p class="p1 p2">Streamline Your</p>
+        <b><p class="p2" id="full">Building a foundation in the mind, preparing the ground in the heart, and constructing dreams with hands </p></b>
+        <b><p class="p3">Build Your Home Secure and Safe With Proffestional Touch</p></b>
+    </div>
+</section>
+<section class="services-section" style="background-color: #d7d7d7;">
+    <div class="container">
+        <h2>Our Services</h2>
+        <ul>
+            <li>
+                <img src="https://www.letsbuild.com/wp-content/uploads/2023/07/Depositphotos_89120612_s-2019.jpg" alt="Design Icon">
+                <p>Design & Planning</p>
+            </li>
+            <li>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY1eVBGrRkgCQ4W_jLL531eZ622h8Jz8heRv1s17Wkrg&s" alt="Construction Icon">
+                <p>Construction Work</p>
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2023/12/15/14/49/city-8450817_1280.jpg" alt="Maintenance Icon">
+                <p>Maintenance Services</p>
+            </li>
+        </ul>
+    </div>
+</section>
+<script>var div = document.getElementById("full");
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    
+    function changeColor(){
+      div.style.color= getRandomColor();
+    }
+    
+    setInterval(changeColor,1000);
+    
+    
+    
+    </script>

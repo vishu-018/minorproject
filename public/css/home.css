@@ -1,0 +1,53 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.hero-section {
+    background-image: url('construction.jpg'); /* Replace 'construction.jpg' with your image file */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.services-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+.services-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.services-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.services-section li {
+    margin: 0 20px;
+}
+.services-section li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+.services-section li p {
+    margin-top: 10px;
+}
+.p2
+{
+    font-size: xx-large;
+}

@@ -1,0 +1,10 @@
+<% layout('/layouts/boilerplate') %>
+<div>
+    <ul>
+        <% attendanceRecords.forEach(record => { %>
+            <div style="height: 5rem; width: 80%; border: 1px solid black; padding:1.5rem; margin-top: 10px; border-radius:10px ; margin-left: 8rem; background-color:azure">
+                <%=record.Name %>  <%= record.status %> <%= record.createdAt.toLocaleString() %>
+            </div>
+        <% }); %>
+    </ul>
+</div>

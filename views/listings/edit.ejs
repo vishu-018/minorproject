@@ -1,0 +1,64 @@
+<% layout('/layouts/boilerplate') %>
+<body><br><br>
+    <div class="col-8 offset-2">
+    <h3 style="color: #fe424d;;">Update</h3><br>
+    <form method="POST" action="/listings/<%=listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data" >
+        <div class="mb-3"> 
+            <label for="title" class="form-label"><b>Company name</b></label><br>
+            <input style="border-color:brown; border-style:groove;"  type="text" name="listing[title]" value="<%=listing.title %>"class="form-control" required>
+            <div  class="valid-feedback">Title looks good</div>
+        </div>
+        <div class="mb-3">
+            <label for="Name" class="form-lable"><b>Name</b></label><br>
+            <input style="border-color:brown; border-style:groove;"  type="text"  value="<%= listing.Name %>" name="listing[Name]" placeholder="Add user name" class="form-control"  required><br>
+            <div  class="invalid-feedback">Please Enter Valid  Name</div>
+        </div>
+        <div class="mb-3">
+            <label for="Address" class="form-label"><b>Address</b></label><br>
+            <textarea style="border-color:brown; border-style:groove;"  cols="10" rows="5" name="listing[Address]"  class="form-control"  required ><%=listing.discription%> </textarea>
+            <div  class="invalid-feedback">Address should be valid</div>
+        </div>
+        <div class="mb-3">
+            original  Image <br>
+            <img src="<%= originalimage %>" alt="" height="200" width="250">
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label"><b>upload new image</b></label><br>
+            <input style="border-color:brown; border-style:groove;"  type="file" name="listing[image]" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="contact" class="form-label"><b>Contact Info</b></label><br>
+            <input style="border-color:brown; border-style:groove;"  type="number" value="<%=listing.contact%> "  name="listing[contact]" value="<%=listing.contact%>" class="form-control" required>
+            <div  class="invalid-feedback">Enter  Valid  number</div>   
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label"><b>Location</b></label><br>
+            <input style="border-color:brown; border-style:groove;"  type="text" name="listing[location]" value="<%=listing.location %>" class="form-control" required>
+            <div  class="invalid-feedback">Please  Enter  Valid  Location</div>
+        </div>
+        <br>
+        <button class="btn btn-dark edit-btn">save Changes</button>
+    </form>
+</div>
+<script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+      
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+      
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+          .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+      
+              form.classList.add('was-validated')
+            }, false)
+          })
+      })()</script>
+</body>
+</html>
